@@ -61,12 +61,17 @@ int main()
     //to close the input file after reading it completely
     inputFile.close();
 
+#ifdef _DEBUG
+    std::cout << "Student Information (Debug Mode): \n" << std::endl;
+
     ////loop through the students vector and print their names
     for (const auto& student : Students)
     {
         std::cout << "" << student.FirstName;
         std::cout << ", " << student.LastName << std::endl;
     }
+
+#endif
 
     return 1;
 }
